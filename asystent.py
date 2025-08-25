@@ -24,7 +24,7 @@ def fetch_history(ticker: str, period: str = "6mo", interval: str = "1d") -> pd.
         "low":   pd.to_numeric(df["Low"],   errors="coerce"),
         "vol":   pd.to_numeric(df["Volume"],errors="coerce"),
     }).dropna()
-    if len(out) < 50:
+    if len(out) < 50:aa
         raise RuntimeError(f"Za mało danych dla {ticker} (min 50 sesji).")
     return out
 
